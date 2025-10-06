@@ -18,14 +18,14 @@ person = {
 colorUser = input("Ingresa el color a añadir: ")
 person["colors"].append(colorUser)
 
+print("\nInformación de la persona:")
 for clave, valor in person.items():
     print(clave, valor)
-print()
 
 person["colors"][0] = "black"
 
-
 for i in range(3):
+    print(f"\nMascota {i+1}:")
     mascotaNameUser = input("Ingresa el nombre de la mascota: ")
     mascotaTypeUser = input("Ingresa el tipo de mascota: ")
     mascota = {
@@ -33,8 +33,9 @@ for i in range(3):
         "type": mascotaTypeUser
     }
     person["animales"].append(mascota)
-print(f"{clave}: {valor}")
 
-for clave, valor in pet.items():
-    print(f"El {pet['name']} es {pet['type']}")
+print("\nLista de mascotas:")
+for mascota in person["animales"]:
+    for clave, valor in mascota.items():
+        print(f'La clave "{clave}" es "{valor}"')
     print()
