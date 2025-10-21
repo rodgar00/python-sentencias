@@ -13,7 +13,7 @@ class Persona:
 
 
 
-    @property #acceder a atributo sin necesidad de modificarlo
+    @property #acceder a atributo sin necesidad de modificarlo, no hace falta llamar a una función
     def nombre_completo(self):
         return self.__nombre
 
